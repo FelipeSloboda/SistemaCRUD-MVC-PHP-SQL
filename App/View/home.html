@@ -1,0 +1,11 @@
+<section>
+    <h1>POSTAGENS:</h1>
+    {% for p in postagens %}
+    <article>
+        <header>
+            <h2><a href="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=post&id={{p.ID}}">{{p.TITULO}}</a></h2>
+        </header>
+        <p>{{p.CONTEUDO}}</p>
+    </article>
+    {% endfor %}
+</section>

@@ -1,0 +1,24 @@
+<h1>GERENCIADOR DE CONTEUDO</h1>
+
+<a href="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=admin&metodo=create">CRIAR POST</a>
+<br><br>
+<hr>
+<br>
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>TITULO</th>
+        <th>CONTEUDO</th>
+        <th>ALTERACAO</th>
+        <th>DELECAO</th>
+    </tr>
+    {% for p in postagens %}
+    <tr>
+        <th>{{p.ID}}</th>
+        <th>{{p.TITULO}}</th>
+        <th>{{p.CONTEUDO}}</th>
+        <th><a href="?pagina=admin&metodo=change&id={{p.ID}}">UPDATE</a></th>
+        <th><a href="?pagina=admin&metodo=delete&id={{p.ID}}">DELETE</a></th>
+    </tr>
+    {% endfor %}
+</table>

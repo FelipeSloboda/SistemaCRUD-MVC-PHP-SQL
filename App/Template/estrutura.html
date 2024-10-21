@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #6495ED;
+        }
+        #corpo {
+            width: 700px;
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            border-left: 2px solid #CCC;
+            border-right: 2px solid #CCC;
+        }
+        #topo {
+            padding: 20px 25px;
+            border-bottom: 2px solid #CCC;
+        }
+        #topo a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        #topo a:hover{
+            text-decoration: underline;
+        }
+        .flutuacaodir{
+            float: right;
+        }
+        #conteudo{
+            background-color: #FFFFFF;
+            padding: 20px 25px;
+        }
+        #conteudo h1{
+            font: 24px Arial;
+            color: #6495ED;
+            margin-bottom: 20px;
+        }
+        #conteudo article{
+            margin-bottom: 20px;
+        }
+        article h2{
+            padding-bottom: 7px;
+        }
+        article h2 a{
+            font-size: 22px;
+            font-family: Arial;
+            color: #333;
+            text-decoration: none;
+        }
+        article h2 a:hover{
+            text-decoration: underline;
+        }
+        article p{
+            font-size: 18px;
+            font-family: Arial;
+            color: #333;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <div id="topo">
+            <header>
+                <nav>
+                    <a href="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=home">HOME</a>
+                    <a href="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=sobre">SOBRE</a>
+                    <a class href="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=admin&metodo=index" class="flutuacao    dir">ADMIN</a>
+                </nav>
+            </header>
+        </div>
+        <div id="conteudo">
+            {{area_dinamica}}
+        </div>
+    </div>
+    
+</body>
+</html>

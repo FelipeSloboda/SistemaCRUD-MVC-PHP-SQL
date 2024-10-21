@@ -1,0 +1,32 @@
+<section>
+    <h1>POSTAGEM:</h1>
+    <article>
+        <header>    
+            <h2>-{{TITULO}}</h2>
+        </header>
+        <p>-{{CONTEUDO}}</p>
+        <br>
+        <hr>
+        <br>
+        <form action="http://localhost/SistemaCRUD-MVC-PHP-SQL/?pagina=post&metodo=addcoment" method="post">
+            <span>NOME:</span><br>
+            <input type="text" name="nome"><br><br>
+            <span>MENSAGEM:</span><br>
+            <textarea name="msg"></textarea><br><br>
+            <input type="submit" value="COMENTAR">
+            <input type="hidden" name="id" value="{{ID}}">
+        </form><br><br>
+        {% if comentarios == false%}
+            <p>Não existe nenhum comentario nesse post.</p>
+        {% else %}
+            {% for c in comentarios %}
+            <article>
+                <header>
+                    <h3>{{c.NOME}}</h3>
+                </header>
+                <p>{{c.MENSAGEM}}</p>
+            </article>
+            {% endfor %}
+        {% endif%}
+    </article>
+</section>
